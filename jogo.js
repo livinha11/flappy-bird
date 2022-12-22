@@ -85,20 +85,28 @@ const flappyBird = {
     altura: 25,
     x: 10,
     y: 50,
+    pulo: 4.0,
+    
+    pula(){
+        flappyBird.velocidade = -flappyBird.pulo;
+    },
 
-        desenha(){
-            contexto.drawImage(
-                sprites,
-                flappyBird.spriteX, flappyBird.spriteY,
-                flappyBird.largura, flappyBird.altura,
-                flappyBird.x, flappyBird.y,
-                flappyBird.largura, flappyBird.altura,
-            );
-        },
+    desenha(){
+        contexto.drawImage(
+            sprites,
+            flappyBird.spriteX, flappyBird.spriteY,
+            flappyBird.largura, flappyBird.altura,
+            flappyBird.x, flappyBird.y,
+            flappyBird.largura, flappyBird.altura,
+        );
+    },
         
         gravidade: 0.25,
         velocidade: 0,
         atualiza(){
+            if(fazColisao()){
+                return;
+            }
             flappyBird.velocidade += flappyBird.gravidade;
             flappyBird.y = flappyBird.y + flappyBird.velocidade;
         }
@@ -142,7 +150,9 @@ const TelaInicio = {
 }
 
 const TelaJogo = {
+
     desenha(){
+    
         ceu();
         back.desenha();
         back2.desenha();
@@ -150,12 +160,18 @@ const TelaJogo = {
         ground2.desenha();
         flappyBird.desenha();
         flappyBird.atualiza();
+        
     },
 
-    click(){}
+    click(){
+        flappyBird.pula();
+    }
 }
 
 var telaAtiva = TelaInicio;
+function fazColisao(){
+
+}
 
 function mudaTelaAtiva(){
     telaAtiva.click();
