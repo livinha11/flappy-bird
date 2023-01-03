@@ -12,7 +12,7 @@ function ceu(){
 }
 
 const som_punch = new Audio();
-som_punch.src = './som/punch.wav';
+som_punch.src = './punch.wav';
 
 
 //plano de fundo
