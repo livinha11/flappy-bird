@@ -1,6 +1,6 @@
 // Aqui teremos a programação do Flappy Bird :D
 const sprites = new Image();
-sprites.src = './sprites.png';
+sprites.src = 'sprites.png';
 
 const canvas = document.querySelector('#game-canvas');
 const contexto = canvas.getContext('2d');
