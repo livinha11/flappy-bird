@@ -71,7 +71,7 @@ const back = {
 
     atualiza(){
         back.x = back.x - (1/6);
-        back.x = back.x % (back.largura); //erro: não está danado sensação de infinito
+        back.x = back.x % (back.largura); 
     },
 }
 
