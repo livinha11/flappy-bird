@@ -4,7 +4,7 @@
  <p>Esse repositório possui o primeiro jogo feitos por mim, com um Flappy Bird inicial. Espero desenvolvê-lo cada dia mais com coisas que vou aprendendo ao longo do tempo. Espero que gostem ❤️</p>
  
  
- ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-Pronto-green)
+ ![Badge em Desenvolvimento](https://img.shields.io/badge/STATUS-Finalizado-green)
 
 
  # :hammer: Funcionalidades do projeto
